@@ -20,7 +20,12 @@ namespace Library5_2
         {
             get
             {
-                return polynomConstants.Length - 1;
+                for (int i=polynomConstants.Length-1; i>=0; i--)
+                {
+                    if (polynomConstants[i] != 0)
+                        return i;
+                }
+                return 0;
             }
         }
 
